@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="kr">
+  <head>
+    <title>Home - My first website.</title>
+    <!--css 적용하는 방법 1. css파일을 별도로 만들고 아래와 같이 연결시킨대
+    <link href="styles.css" rel="stylesheet" />-->
+    <!--2.아래와 같이 inline style 사용한다. -->
+    <!--inline 속성이면 높이와 너비가 없다-->
+    <!--inline tag는 padding 상하좌우 모두 동작하나, margin은 좌우만 동작-->
+    <style>
+      body {
+        margin: 20px;
+      }
+      .btn {
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-size: xx-large;
+      }
+      .teal {
+        background-color: teal;
+      }
+      .tomato {
+        background-color: tomato;
+        color: white;
+      }
+    </style>
+  </head>
+
+  <body>
+    <span class="btn teal">hello</span>
+    <span class="btn tomato">hello</span>
+    <span class="btn teal">hello</span>
+    <span class="btn tomato">hello</span>
+    <span class="btn teal">hello</span>
+    <span class="btn tomato">hello</span>
+    <span class="btn teal">hello</span>
+  </body>
+</html>

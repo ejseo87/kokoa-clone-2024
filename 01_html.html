@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="kr">
+  <head>
+    <link
+      rel="shorcut icon"
+      href="https://ssl.gstatic.com/ui/v1/icons/mail/rfr/gmail.ico"
+      type="image/x-icon"
+    />
+    <meta charset="utf-8" />
+    <title>Home - My first website.</title>
+    <!--css 적용하는 방법 1. css파일을 별도로 만들고 아래와 같이 연결시킨대
+    <link href="styles.css" rel="stylesheet" />-->
+    <!--2.아래와 같이 inline style 사용한다. -->
+    <style>
+      h1 {
+        color: turquoise;
+        text-decoration: underline;
+        font-weight: 800;
+        font-style: italic;
+        font-size: 50px;
+      }
+      address {
+        text-align: center;
+        color: tomato;
+      }
+    </style>
+    <meta name="decription" content="This is webstie" />
+    <!--from here not working-->
+    <meta
+      property="og:title"
+      content="my first website"
+      <meta
+      property="og:type"
+      content="website"
+    />
+    <meta
+      property="og:url"
+      content="file:///home/ejseo87/kokoa_clone/home.html"
+    />
+    <meta property="og:imagel" content="./img/screenshot.png" />
+    <meta property="og:decription" content="test description" />
+    <meta property="og:locale" content="ko_KR" />
+    <meta property="og:image.width" content="1200" />
+    <meta property="al:image.heigh" content="630" />
+    <!--to here not working-->
+  </head>
+
+  <body>
+    <header>
+      <h1>title h1</h1>
+    </header>
+    <main>
+      <h2>title h2</h2>
+      <h3>title he</h3>
+      <h4>title h4</h4>
+      <h5>title h5</h5>
+      <h6>title h6</h6>
+      <address>jangmalro1126</address>
+      <ul>
+        <li>bear</li>
+        <li>meat</li>
+        <li>milk</li>
+        <li>김치</li>
+      </ul>
+
+      <a href="http://googl.com" target="_blank">Go to google.com</a>
+      <image src="./img/screenshot.png" />
+      <div>
+        <audio autoplay loop controls>
+          <!--NOT WORKGIN!!! 로컬에 저장된 오디오 파일은 실행되지 않는다-->
+          <source src="/src/t-rex-roar.mp3" type="audio/mpeg" />
+          test audio
+        </audio>
+      </div>
+      <div>
+        <!--웹링크는 오디오 재생된다-->
+        <audio
+          src="https://ccrma.stanford.edu/~jos/mp3/harpsi-cs.mp3"
+          controls
+        ></audio>
+      </div>
+      <div>
+        <dialog open>
+          <p>Greetings, one and all!</p>
+          <form method="dialog">
+            <button>OK</button>
+          </form>
+        </dialog>
+      </div>
+      <p>
+        this is <strong>paragraph</strong>. 끝까지 하나의 문단<sup>으로</sup>
+        처리된다. 글의 뭉터기라 할까. <mark>브라우저</mark>에 표시 될 때도
+        단락<sub>처럼 </sub>보일 것이다. 글을 길게 써서 증명 할 수 있다. this is
+        paragraph. 끝까지 하나의 문단으로 처리된다. 글의 뭉터기라 할까.
+        브라우저에 표시 될 때도 단락처럼 보일 것이다. 글을 길게 써서 증명 할 수
+        있다. this is paragraph. 끝까지 하나의 문단으로 처리된다. 글의 뭉터기라
+        할까. 브라우저에 표시 될 때도 단락처럼 보일 것이다. 글을 길게 써서 증명
+        할 수 있다. this is paragraph. 끝까지 하나의 문단으로 처리된다. 글의
+        뭉터기라 할까. 브라우저에 표시 될 때도 단락처럼 보일 것이다. 글을 길게
+        써서 증명 할 수 있다. this is paragraph. 끝까지 하나의 문단으로
+        처리된다. 글의 뭉터기라 할까. 브라우저에 표시 될 때도 단락처럼 보일
+        것이다. 글을 길게 써서 증명 할 수 있다. this is paragraph. 끝까지 하나의
+        문단으로 처리된다. 글의 뭉터기라 할까. 브라우저에 표시 될 때도 단락처럼
+        보일 것이다. 글을 길게 써서 증명 할 수 있다.
+      </p>
+      <span>span is short text</span>
+      <pre>pre</pre>
+      <code>code</code><br />
+      <abbr title="Korea Broadcasting Service">KBS</abbr><br />
+      <br />
+      <form>
+        <div>
+          <input type="color" />
+        </div>
+
+        <!--label works together with input. labal with for, input with id, so for & id should be same.-->
+        <div>
+          <label for="profile">Profile Photo</label>
+          <input id="profile" type="file" accept=".png,.pdf" />
+          <label for="first-name">First Name</label>
+          <input id="first-name" required placeholder="Name" type="text" />
+          <!---->
+          <input placeholder="Last Name" disabled type="text" />
+        </div>
+
+        <div>
+          <input required placeholder="Username" type="text" />
+          <input required placeholder="passwd" minlength="8" type="password" />
+        </div>
+
+        <div>
+          <!--url-->
+          <label for="website">Website</label>
+          <input id="website" required placeholder="url" type="url" />
+        </div>
+
+        <div>
+          <label for="email">Email</label>
+          <input id="email" placeholder="email" type="email" />
+        </div>
+
+        <div>
+          <input type="submit" value="Create Account" />
+        </div>
+
+        <input type="range" />
+        <input type="date" />
+      </form>
+    </main>
+    <footer>&copy; 2024 ejseo</footer>
+  </body>
+</html>

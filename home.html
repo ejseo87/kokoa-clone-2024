@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="kr">
+  <head>
+    <title>Home - My first website.</title>
+    <!--
+      border-radius: 50%로 설정하면 모서리를 동그라미로 만든다.
+      transform: rotateX(Y)(ndeg) => X(Y)축으로 n 도 회전
+      transform:translateX(Y)에서 translate는 transformation을 적용시키지만, 다른 형제(sibling)은 변화시키지 않음
+      transformation은 box element를 변형시키지 않음. 일종의 3d transformation이기 때문(픽셀을 움직인다는 개념)=> margin, padding을 위해서 translateX(Y)를 사용하지 않음. 다른 차원에 존재하는 거라고 생각하면 됨
+    -->
+    <style>
+      body {
+        display: flex;
+        height: 100vh;
+        align-items: center;
+        justify-content: center;
+      }
+
+      div {
+        background-color: teal;
+        width: 200px;
+        height: 200px;
+      }
+      @media screen and (max-width: 600px) {
+        div {
+          background-color: tomato;
+        }
+      }
+      @media screen and (min-width: 601px) and (max-width: 1200px) {
+        div {
+          background-color: turquoise;
+        }
+      }
+      @media screen and (min-width: 1200px) {
+        div {
+          background-color: wheat;
+        }
+      }
+      span {
+        font-size: 36px;
+      }
+      @media screen and (orientation: landscap) e {
+        span {
+          display: none;
+        }
+      }
+    </style>
+    <body>
+      <div></div>
+    </body>
+  </head>
+</html>

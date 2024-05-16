@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="kr">
+  <head>
+    <title>Home - My first website.</title>
+    <!--
+      border-radius: 50%로 설정하면 모서리를 동그라미로 만든다.
+      transform: rotateX(Y)(ndeg) => X(Y)축으로 n 도 회전
+      transform:translateX(Y)에서 translate는 transformation을 적용시키지만, 다른 형제(sibling)은 변화시키지 않음
+      transformation은 box element를 변형시키지 않음. 일종의 3d transformation이기 때문(픽셀을 움직인다는 개념)=> margin, padding을 위해서 translateX(Y)를 사용하지 않음. 다른 차원에 존재하는 거라고 생각하면 됨
+    -->
+    <style>
+      body {
+        display: flex;
+        height: 100vh;
+        align-items: center;
+        justify-content: center;
+      }
+      @keyframes supersexyCoinFlip {
+        0% {
+          transform: rotateZ(0);
+        }
+        25% {
+          transform: scale(2);
+        }
+        50% {
+          transform: rotateZ(180deg) translateZ(100px);
+          border-radius: 0px;
+          border-color: tomato;
+          opacity: 0;
+        }
+        75% {
+          transform: scale(2);
+        }
+        100% {
+          transform: rotateZ(0) translateZ(0px);
+        }
+      }
+      img {
+        border: 5px solid black;
+        border-radius: 50%;
+        width: 200px;
+        animation: supersexyCoinFlip 10s ease-in-out infinite;
+      }
+    </style>
+    <body>
+      <img src="img/car_640.png" />
+    </body>
+  </head>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="kr">
+  <head>
+    <title>Home - My first website.</title>
+    <!--css 적용하는 방법 1. css파일을 별도로 만들고 아래와 같이 연결시킨대
+    <link href="styles.css" rel="stylesheet" />-->
+    <!--2.아래와 같이 inline style 사용한다. -->
+    <!--inline 속성이면 높이와 너비가 없다-->
+    <!--inline tag는 padding 상하좌우 모두 동작하나, margin은 좌우만 동작-->
+    <!--inline-block은 사용하기 나쁨. 왜냐하면 통제가 아니되는 margin이 있어서 responsive design 동작 안함 -->
+    <!--그래서 flexbox 사용 : 단, parent에 명시하고 children에는 명시하지 않는다. 여기에서는 parent는 body, childre은 div-->
+    <!--        flex-direction: column;-->
+    <!-- flex-wrap: nowrap;-->
+    <!--postion : abolute 인 객체는 relative 인 부모객체를 기준으로 위치를 정한다. 
+      여기서는 부모 div가 relative가 아니기 때문에 부모 div의 부모인 body가 relative이기에 body를 기준으로 움직였음.
+       만약 body가 이닌 부모 div를 기준으로 위치하기를 원하면 부모div에 position : relative 속성을 부여할 것 -->
+    <!--
+      pseudo selector
+      좀더 세부적으 로 엘리먼트를 선택해 주는 것!     (기존 방법 : 태그, id w/#, class w/.)
+
+      선택의 복잡한 과정을 pseudo selector로 가능함
+      ex>    div:first-child {    background-color: tomato;     }
+      /* pseudo selector */
+      div:last-child {    background-color: teal;    }
+      id나 class를 따로 만드는것보다 이렇게 지정하는게 훨씬 좋은 방법이다.
+      css에서만 선택을 하면 되니까! html코드를 고칠 필요가 없기 때문이다
+
+      n번째 태그 수정하기 nth-child(n) 올ㅋ
+      span:nth-child(2) {    background-color: teal;    }
+      span:nth-child(even) { //or odd ( 홀수 )    background-color: teal;    }
+      even은 짝수! 짝수번째를 모두 바꿀 수있다 오 so cool !
+
+      span:nth-child(5n + 1) {    background-color: silver;    }
+      n을 사용하면 매우 편하다
+       -->
+    <!--                  
+      div의 바로 밑 자식에서 span을 찾아서 그것만 효과를 주는 방법
+      1)       div span 
+            이렇게하면 div밑에 있는 모든 span이 효과를 가진다
+            직접적인 부모가 아니어도 밑에있는 것들을 모두 css가 찾는다.
+      2) div > span 
+            이렇게하면 바로 밑!!! 을 찾게 되므로 바로 밑의 자식만 건들일수있게된다.
+
+      형제에게 효과를 주는방법
+        p + span 
+        + 를 사용하면 형제에게 영향을 끼칠 수 있다. cool
+      
+        ※ > 를 사용하면 direct child를 찾고, + 를 사용하면 바로 코드상 밑에 있는 sibling을 찾게된다.
+    -->
+    <style>
+      body {
+        height: 1000vh;
+        margin: 50px;
+      }
+      span {
+        color: red;
+        font-size: 28px;
+        background-color: yellowgreen;
+        padding: 5px;
+        border-radius: 10px;
+      }
+      p > span {
+        color: white;
+        text-decoration: line-through;
+      }
+      div > span {
+        margin: 0 20px;
+        text-decoration: underline;
+      }
+      p ~ span {
+        background-color: aliceblue;
+        color: darkblue;
+        font-size: 44px;
+        text-decoration: overline;
+      }
+      input {
+        border: 1px solid wheat;
+      }
+      input:required {
+        border-color: tomato;
+      }
+      input[type="password"] {
+        background-color: thistle;
+      }
+      input[placeholder~="name"] {
+        background-color: antiquewhite;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div>
+      <form>
+        <input type="text" placeholder="First name" />
+        <input type="text" placeholder="Last name" />
+        <input type="password" required placeholder="password" />
+      </form>
+    </div>
+  </body>
+</html>

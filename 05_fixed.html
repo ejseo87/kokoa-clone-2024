@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="kr">
+  <head>
+    <title>Home - My first website.</title>
+    <!--css 적용하는 방법 1. css파일을 별도로 만들고 아래와 같이 연결시킨대
+    <link href="styles.css" rel="stylesheet" />-->
+    <!--2.아래와 같이 inline style 사용한다. -->
+    <!--inline 속성이면 높이와 너비가 없다-->
+    <!--inline tag는 padding 상하좌우 모두 동작하나, margin은 좌우만 동작-->
+    <!--inline-block은 사용하기 나쁨. 왜냐하면 통제가 아니되는 margin이 있어서 responsive design 동작 안함 -->
+    <!--그래서 flexbox 사용 : 단, parent에 명시하고 children에는 명시하지 않는다. 여기에서는 parent는 body, childre은 div-->
+    <!--        flex-direction: column;-->
+    <!-- flex-wrap: nowrap;-->
+    <style>
+      body {
+        height: 1000vh;
+        margin: 20px;
+      }
+      div {
+        width: 300px;
+        height: 300px;
+        background-color: teal;
+        color: white;
+      }
+      #green {
+        position: fixed;
+        background-color: teal;
+        opacity: 0.2;
+      }
+      #second {
+        background-color: wheat;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="green"></div>
+    <div id="second"></div>
+  </body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="kr">
+  <head>
+    <title>Home - My first website.</title>
+    <!--css 적용하는 방법 1. css파일을 별도로 만들고 아래와 같이 연결시킨대
+    <link href="styles.css" rel="stylesheet" />-->
+    <!--2.아래와 같이 inline style 사용한다. -->
+    <!--inline 속성이면 높이와 너비가 없다-->
+    <style>
+      * {
+        border: 1px dashed black;
+      }
+      html {
+        background-color: tomato;
+      }
+      body {
+        margin: 20px;
+        padding: 20px;
+        background-color: thistle;
+      }
+      div {
+        padding: 20px;
+      }
+      span {
+        border-style: solid;
+      }
+      #first {
+        background-color: whitesmoke;
+        height: 150px;
+        width: 150px;
+      }
+      #second {
+        background-color: teal;
+        height: 100px;
+        width: 100px;
+      }
+      #third {
+        background-color: wheat;
+        height: 50px;
+        width: 50px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="first">
+      <div id="second">
+        <div id="third">
+          <span>dkjlkjljl</span>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
