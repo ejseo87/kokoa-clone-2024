@@ -1,0 +1,39 @@
+.status-bar {
+  background-color: #f9f9fa;
+  margin: 10px 10px;
+  /*
+  position: fixed;
+  top: 0;
+    width: 100%;
+  box-sizing: border-box;
+*/
+  display: flex;
+  /* 원래는 space-between 이었으나 css hack 적용 위해 center로 바꾸고 3개의 column의 width를 33%로 함 */
+  justify-content: center;
+}
+
+.status-bar__column {
+  width: 33%;
+  box-sizing: border-box;
+}
+.status-bar__column:first-child span {
+  margin-right: 5px;
+}
+.status-bar__column:nth-child(2) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.status-bar__column:last-child {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.status-bar__column .fa-battery-three-quarters {
+  margin-left: 5px;
+}
+
+.status-bar__column .fa-bolt {
+  margin-left: 5px;
+}

@@ -1,0 +1,56 @@
+#friends-display-link {
+  text-align: center;
+  display: block;
+  background-color: var(--background-color);
+  padding: 20px 0px;
+  font-size: 20px;
+  margin-bottom: 5px;
+  margin-top: -10px;
+}
+
+#friends-display-link i {
+  margin: 0px 10px;
+  color: var(--gray-color);
+}
+
+.friends-screen__channel {
+  margin-top: 25px;
+  border-top: var(--main-border);
+  padding-top: 20px;
+}
+.friends-screen__channel-header {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--gray-color);
+  font-size: 18px;
+  font-weight: 600;
+}
+
+@keyframes hideSplashScreen {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+/* animation에 forwards 옵션을 주면 애니메이션 마지막 화면을 유지하게 되지만, 
+   여전히 애니매이션이 남아있어서 마우스, 키보드 동작이 되지 않는다.
+   해결 : @keyfram의 마지막 애니매에션에 "visibility: hidden" 을 설정 */
+#splash-screen {
+  background-color: var(--yellow);
+  color: #3c1e1e;
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 80px;
+  animation: hideSplashScreen 0.4s ease-in-out forwards;
+  animation-delay: 2s;
+}

@@ -1,0 +1,185 @@
+<!--vscode 단축키
+    !   HTML문서 기본틀  입력--
+    Shift + alt + 방향키 위 아래 : 해당 라인 복붙
+    div class="name" -> div.name
+    div id="id" -> div#id
+    nav>ul>li*4>a : nav아래에 ul, 그 아래에 4개의 li, 각각의 li안에 anchor
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="css/styles.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Find - Kokoa Clone</title>
+  </head>
+  <body>
+    <!--status bar component-->
+    <div class="status-bar">
+      <div class="status-bar__column">
+        <span>No Service</span>
+        <!--Wifi icon-->
+        <i class="fa-solid fa-wifi"></i>
+      </div>
+      <div class="status-bar__column">
+        <span>18:43</span>
+      </div>
+      <div class="status-bar__column">
+        <span>110%</span>
+        <!--Batter Icon-->
+        <i class="fa-solid fa-battery-three-quarters fa-lg"></i>
+        <!--lightning Icon-->
+        <i class="fa-solid fa-bolt"></i>
+      </div>
+    </div>
+
+    <!--header component -->
+    <header class="screen-header">
+      <h1 class="screen-header__title">Find</h1>
+      <div class="screen-header__icons">
+        <div class="screen-header__icons__icon">
+          <span><i class="fa-solid fa-magnifying-glass fa-xl"></i></span>
+        </div>
+
+        <div class="screen-header__icons__icon">
+          <span class="dot"> </span>
+          <span><a class="link-color" href="settings.html"><i class="fa-solid fa-gear fa-xl"></i></a></span>
+        </div>
+      </div>
+    </header>
+
+    <!--find main-->
+
+    <main class="main-screen">
+      <!-- find icons component-->
+      <div class="icon-row">
+        <div class="icon-row__icon">
+          <i class="fa-solid fa-qrcode"></i>
+          <span>QR Code</span>
+        </div>
+        <div class="icon-row__icon">
+          <i class="fa-regular fa-address-book"></i>
+          <span>Add by Contacts</span>
+        </div>
+        <div class="icon-row__icon">
+          <i class="fa-solid fa-fingerprint"></i>
+          <span>Add by ID</span>
+        </div>
+        <div class="icon-row__icon">
+          <i class="fa-regular fa-envelope"></i>
+          <span>Invite</span>
+        </div>
+      </div>
+
+      <!--recommended friends-->
+      <div class="recommended-friends">
+        <h6 class="recommended-fiends__title">Recommended Friends</h6>
+        <span>You have no recommended friends</span>
+      </div>
+
+      <!--open chat-->
+      <div class="open-chat">
+        <div class="open-chat__header">
+          <h4>Open Chat</h4>
+          <span
+            >Go to Opencha Home <i class="fa-solid fa-chevron-right fa-xs"></i
+          ></span>
+        </div>
+        <!--open post-->
+        <!--1st-->
+        <div class="open-post">
+          <div class="open-post__column">
+            <h5 class="open-post__title">#BTS</h5>
+            <h6 class="open-post__hashtags">#bts#army#friends</h6>
+            <div class="open-post__members">
+              <img
+                src="https://cdn.pixabay.com/photo/2017/05/18/08/25/girl-2322901_1280.jpg"
+              />
+              <span class="open-post__member-count">802 members</span>
+              <div class="divider"></div>
+              <span class="open-post__member-status">Active</span>
+            </div>
+          </div>
+          <div class="open-post__column">
+            <div class="open-post__photo">
+              <img
+                src="https://musicmeta-phinf.pstatic.net/album/005/902/5902422.jpg?type=r360Fll&v=20240217004010"
+              />
+              <div class="open-post__heart-count">
+                <i class="fa-solid fa-heart fa-sx"></i>
+                <span>326</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--2nd-->
+      <div class="open-post">
+        <div class="open-post__column">
+          <h5 class="open-post__title">#LOL</h5>
+          <h6 class="open-post__hashtags">#lol#leagueoflegends#faker</h6>
+          <div class="open-post__members">
+            <img
+              src="https://search.pstatic.net/common?type=b&size=3000&quality=100&direct=true&src=http%3A%2F%2Fsstatic.naver.net%2Fpeople%2F64%2F201405201641384281.jpg"
+            />
+            <span class="open-post__member-count">34,500 members</span>
+            <div class="divider"></div>
+            <span class="open-post__member-status">Active</span>
+          </div>
+        </div>
+        <div class="open-post__column">
+          <div class="open-post__photo">
+            <img
+              src="https://search.pstatic.net/common?type=f&size=174x174&quality=95&direct=true&src=https%3A%2F%2Fnng-phinf.pstatic.net%2FMjAyMTA5MDhfMTk3%2FMDAxNjMxMDY4NDk3MzYx.xJYcVzRN9rJhjo_Wk3glFkqgEEQYbCAxnd49BK_L5dwg.0drLMwYFCWTAYc7e0Cy0zQUEWC-kFXEM79k__1uN7Ukg.PNG%2FLeague_of_Legends.png"
+            />
+            <div class="open-post__heart-count">
+              <i class="fa-solid fa-heart fa-sx"></i>
+              <span>5.3만+</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    </main>
+
+    <!--navigaor component-->
+    <nav class="nav">
+      <ul class="nav__list">
+        <li class="nav__btn">
+          <a class="nav__link" href="friends.html"
+            ><i class="fa-regular fa-user fa-2xl"></i
+          ></a>
+        </li>
+        <li class="nav__btn">
+          <a class="nav__link" href="chats.html">
+            <span class="nav_notificaion badge">1</span>
+            <i class="fa-regular fa-comment fa-2xl"></i
+          ></a>
+        </li>
+        <li class="nav__btn">
+          <a class="nav__link" href="find.html"
+            ><i class="fa-solid fa-magnifying-glass-plus fa-2xl"></i
+          ></a>
+        </li>
+        <li class="nav__btn">
+          <a class="nav__link" href="more.html">
+            <span class="dot"> </span>
+            <i class="fa-solid fa-ellipsis fa-2xl"></i
+          ></a>
+        </li>
+      </ul>
+    </nav>
+    
+    <!--no mobile-->
+    <div id="no-mobile">
+      <span>Your screen is too big !!!</span>
+    </div>
+
+    <!--font awseome-->
+    <script
+      src="https://kit.fontawesome.com/a3d4309992.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

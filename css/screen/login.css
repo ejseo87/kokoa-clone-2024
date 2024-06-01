@@ -1,0 +1,60 @@
+.welcome-header {
+  margin: 110px 0px;
+  /*위아래 마진 */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.welcome-header__title {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 35px;
+}
+.welcome-header__text {
+  font-size: 22px;
+  opacity: 0.5;
+}
+
+#login-form {
+  margin: 0px 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+#login-form input {
+  border: none;
+  padding: 20px 0px;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+/*  input 에 적용할 CSS 중에 submit에는 적용하고 싶지 않은 css가 있다면 :not 을 사용한다. */
+#login-form input:not([type="submit"]) {
+  border-bottom: var(--main-border);
+  transition: boder-color 0.5s ease-in-out;
+}
+
+#login-form input::placeholder {
+  color: var(--gray-color);
+}
+
+#login-form input:focus {
+  border-color: var(--yellow);
+}
+#login-form input[type="submit"] {
+  background-color: var(--yellow);
+  cursor: pointer;
+  padding: 20px 0px;
+  border-radius: 10px;
+  font-size: 24px;
+  margin: 40px 0px;
+}
+
+#login-form a {
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  font-size: 18px;
+}

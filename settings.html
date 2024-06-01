@@ -1,0 +1,120 @@
+<!--vscode 단축키
+    !   HTML문서 기본틀  입력--
+    Shift + alt + 방향키 위 아래 : 해당 라인 복붙
+    div class="name" -> div.name
+    div id="id" -> div#id
+    nav>ul>li*4>a : nav아래에 ul, 그 아래에 4개의 li, 각각의 li안에 anchor
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="css/styles.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Settings - Kokoa Clone</title>
+  </head>
+  <body>
+    <!--status bar component-->
+    <div class="status-bar">
+      <div class="status-bar__column">
+        <span>No Service</span>
+        <!--Wifi icon-->
+        <i class="fa-solid fa-wifi"></i>
+      </div>
+      <div class="status-bar__column">
+        <span>18:43</span>
+      </div>
+      <div class="status-bar__column">
+        <span>110%</span>
+        <!--Batter Icon-->
+        <i class="fa-solid fa-battery-three-quarters fa-lg"></i>
+        <!--lightning Icon-->
+        <i class="fa-solid fa-bolt"></i>
+      </div>
+    </div>
+
+    <!--header component -->
+    <header class="alt-screen-header">
+      <div class="alt-screen-header__column">
+        <a class="link-color" href="more.html">
+          <i class="fa-solid fa-angle-left fa-xl"></i>
+        </a>
+      </div>
+      <div class="alt-screen-header__column">
+        <h1 class="alt-screen-header__title">Settings</h1>
+      </div>
+      <div class="alt-screen-header__column">
+        <i class="fa-solid fa-magnifying-glass fa-xl"></i>
+      </div>
+    </header>
+
+    <!--settings main-->
+
+    <main class="main-screen">
+      <!--1st list -->
+      <ul class="settings-list">
+        <li class="settings__setting">
+          <div class="settings__setting__column">
+            <i class="fa-solid fa-bullhorn"></i>
+            <span>Notices</span>
+          </div>
+          <div class="settings__setting__column"></div>
+        </li>
+        </div>
+        <li class="settings__setting">
+          <div class="settings__setting__column">
+          <i class="fa-solid fa-flask"></i>
+          <span>Kokoa Lab</span>
+        </div>
+        <div class="settings__setting__column"></div>
+        </li>
+        <li class="settings__setting">
+          <div class="settings__setting__column">
+          <i class="fa-solid fa-circle-info"></i>
+          <span>Version</span>
+        </div>
+        <div class="settings__setting__column">Latest Version</div>
+        </li>
+      </ul>
+    </main>
+
+    <!--navigaor component-->
+    <nav class="nav">
+      <ul class="nav__list">
+        <li class="nav__btn">
+          <a class="nav__link" href="friends.html"
+            ><i class="fa-regular fa-user fa-2xl"></i
+          ></a>
+        </li>
+        <li class="nav__btn">
+          <a class="nav__link" href="chats.html">
+            <span class="nav_notificaion badge">1</span>
+            <i class="fa-regular fa-comment fa-2xl"></i
+          ></a>
+        </li>
+        <li class="nav__btn">
+          <a class="nav__link" href="find.html"
+            ><i class="fa-solid fa-magnifying-glass fa-2xl"></i
+          ></a>
+        </li>
+        <li class="nav__btn">
+          <a class="nav__link" href="more.html">
+            <span class="dot"> </span>
+            <i class="fa-solid fa-ellipsis fa-2xl"></i
+          ></a>
+        </li>
+      </ul>
+    </nav>
+    
+    <!--no mobile-->
+    <div id="no-mobile">
+      <span>Your screen is too big !!!</span>
+    </div>
+
+    <!--font awseome-->
+    <script
+      src="https://kit.fontawesome.com/a3d4309992.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
